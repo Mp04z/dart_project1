@@ -5,7 +5,7 @@ import 'dart:io';
 const String baseUrl = "http://localhost:3000";
 String? loggedInUserId;
 void main() {
-
+  login();
 }
 
 void login() {
@@ -30,7 +30,7 @@ void login() {
     final result = jsonDecode(response.body);
     print(" ${result['message']}");
     loggedInUserId = result['userId'].toString();
-    await showMenu();
+    // await showMenu();
   } else {
     final result = jsonDecode(response.body);
     print(" ${result['message']}");
