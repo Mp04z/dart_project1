@@ -5,11 +5,10 @@ import 'dart:io';
 const String baseUrl = "http://localhost:3000";
 String? loggedInUserId;
 void main() {
-
+  login();
 }
 
-void login() {
-  Future<void> login() async {
+Future<void> login() async {
   print("===== Login =====");
 
   stdout.write("Username: ");
@@ -30,30 +29,19 @@ void login() {
     final result = jsonDecode(response.body);
     print(" ${result['message']}");
     loggedInUserId = result['userId'].toString();
-    await showMenu();
+    showmenu();
   } else {
     final result = jsonDecode(response.body);
     print(" ${result['message']}");
   }
 }
-}
 
-void showmenu() {
+void showmenu() {}
 
-}
+void showall() {}
 
-void showall() {
+void showtoday() {}
 
-}
+void addexpense() {}
 
-void showtoday() {
-
-}
-
-void addexpense() {
-
-}
-
-void deleteexpense() {
-
-}
+void deleteexpense() {}
