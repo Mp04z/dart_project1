@@ -31,7 +31,7 @@ Future<void> addexpense() async {
     );
 
     if (response.statusCode == 200) {
-      print("Inserted");
+      print("Inserted ");
     } else {
       print("⚠️ Failed to add expense: ${response.body}");
     }
